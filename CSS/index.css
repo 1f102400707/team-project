@@ -5,3 +5,25 @@ p{
 #title{
     font-size: 30px;
 }
+
+#sub{
+    position: relative;
+    bottom: 10px;
+}
+
+h1{
+    position: relative;
+    top: 10px;
+    left:10px;
+}
+
+#main{
+    position: relative;
+    left: 250px;
+    bottom: 100px;
+}
+
+.mainmsg{
+    position: relative;
+    left:10px;
+}

@@ -3,7 +3,7 @@
     <head>
         <title>test</title>
         <meta charset="UTF-8">
-        <link rel = "stylesheet" type = "text/css" href = "..\\CSS\\index.css">
+        <link rel = "stylesheet" type = "text/css" href = "/CSS/index.css">
         <meta name="viewport" content="width=device-width"> 
     </head>
     <body>
@@ -11,7 +11,7 @@
 
         <div id = "sub"></div>
         <script>
-            document.getElementById('sub').innerHTML = fetch('commonHTML/common.html').then(response => response.text()).then(data => {document.getElementById('sub').innerHTML = data;});
+            document.getElementById('sub').innerHTML = fetch('/HTML/commonHTML/common.html').then(response => response.text()).then(data => {document.getElementById('sub').innerHTML = data;});
         </script>
 
         <div id = "main">
@@ -19,7 +19,7 @@
             <span id = "title">TOP</span>
             <h2>このサイトへようこそ！！！</h2>
             <div class = "mainmsg">
-                <P>作成中</P>
+                <p>作成中</p>
             </div>
             
             <h2>メンバー紹介！！！</h2>
@@ -29,7 +29,7 @@
                 <tr><th>メンバー２</th><td>紹介文</td></tr>
                 <tr><th>メンバー３</th><td>紹介文</td></tr>
             </table>
-            </div>
+            
         </div>
     </body>
 </html>

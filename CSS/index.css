@@ -4,6 +4,7 @@ p{
 
 #title{
     font-size: 30px;
+    margin-bottom: 10px;
 }
 
 #sub{
@@ -20,10 +21,33 @@ h1{
 #main{
     position: relative;
     left: 250px;
-    bottom: 100px;
+    bottom: 120px;
 }
 
 .mainmsg{
     position: relative;
     left:10px;
+}
+
+#writer{
+    position: relative;
+    top:60px;
+    color:gray;
+}
+
+#C{
+    margin:1px 0px 1px 0px;
+    font-size :10px;
+}
+
+.citiation{
+    background-color: #b9b9b9;
+    font-size: smaller;
+    border-left: solid 5px #111984;
+    padding: 10px 10px 10px 10px;
+    width: 50vw;
+}
+
+img{
+    height: 400px;
 }

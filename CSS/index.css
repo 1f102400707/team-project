@@ -1,56 +1,227 @@
-p{
-    color: #103984;
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff0f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 70px; /* Fixed header space */
 }
 
-#title{
-    font-size: 30px;
+header {
+    background-color: #ffccda;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+    color: #ff6699;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ff6699;
+    font-weight: bold;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #ff3366;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ff6699;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+nav ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#main {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    animation: slideIn 1s ease-in-out;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out 0.5s forwards;
+}
+
+#title {
+    font-size: 2.5em;
+    color: #ff6699;
+    text-align: center;
+    margin-bottom: 20px;
+    animation: zoomIn 1s ease-in-out;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+#title::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #ff6699;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.5s ease;
+    z-index: -1;
+}
+
+#title:hover::before {
+    transform: scaleX(1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+th, td {
+    border: 1px solid #ffccda;
+    padding: 10px;
+    text-align: left;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+th {
+    background-color: #ffccda;
+    color: #333;
+}
+
+td img {
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    max-width: 100%;
+    height: auto;
+}
+
+td img:hover {
+    transform: scale(1.1);
+}
+
+#C {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+    animation: fadeIn 2.5s ease-in-out;
+}
+
+h2 {
+    color: #ff6699;
+    border-bottom: 2px solid #ffccda;
+    padding-bottom: 5px;
     margin-bottom: 10px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-#sub{
-    position: relative;
-    bottom: 10px;
+.mainmsg {
+    background-color: #ffe6f2;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
 }
 
-h1{
-    position: relative;
-    top: 10px;
-    left:10px;
+.mainmsg p {
+    margin: 0 0 10px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-#main{
-    position: relative;
-    left: 250px;
-    bottom: 120px;
+.mainmsg ol {
+    padding-left: 20px;
 }
 
-.mainmsg{
-    position: relative;
-    left:10px;
+.mainmsg ol li {
+    margin-bottom: 10px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-#writer{
-    position: relative;
-    top:60px;
-    color:gray;
+.mainmsg ul {
+    padding-left: 20px;
 }
 
-#C{
-    margin:1px 0px 1px 0px;
-    font-size :10px;
+#writer {
+    display: block;
+    text-align: right;
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 20px;
+    animation: fadeIn 2.5s ease-in-out;
 }
 
-.citation{
-    background-color: #b9b9b9;
-    font-size: smaller;
-    border-left: solid 5px #111984;
-    padding: 10px 10px 10px 10px;
-    width: 50vw;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
-img{
-    height: 400px;
+@keyframes slideIn {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
+
 /* HTMLサンプルコード */
 /* <span style="background-color: #000000"></span> */
 /* このタグで囲んだ要素は背景が黒になります。要素の文字色も黒の場合、要素は隠れて見えなくなります。マウスで選択すれば、要素の色が反転され見れるようになります

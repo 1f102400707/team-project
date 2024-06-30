@@ -1,10 +1,10 @@
 :root {
-    --font-color:#ff6699; 
-    --back-color:#fff0f6; 
-    --back-color2:#ffe6f2;
-    --back-color3:#ffffff;
-    --main-color:  #ffccda; 
-    --link-hover-color: #ff3366; 
+    --font-color: #5A189A; 
+    --back-color: #F8EFFF; 
+    --back-color2: #F3D1FF;
+    --back-color3: #FFF5FF;
+    --main-color: #DABFFF; 
+    --link-hover-color: #9D4EDD; 
 }
 body {
     font-family: 'Arial', sans-serif;

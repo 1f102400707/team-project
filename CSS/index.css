@@ -140,11 +140,17 @@ th, td {
     padding: 10px;
     text-align: left;
     animation: fadeIn 1.5s ease-in-out;
+    
 }
 
 th {
     background-color: var(--main-color);
     color: #333;
+    width: 5vw;
+}
+
+.explain {
+    width: 15vw;
 }
 
 td img {
